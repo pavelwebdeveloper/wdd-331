@@ -5,7 +5,7 @@ const makeList =()=> {
     const links = [
         {
           label: "Week1 notes",
-          url: "week1/index.html"
+          url: "week1/review-webpage.html"
         },
         {
             label: "Week2 notes",

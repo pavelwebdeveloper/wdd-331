@@ -81,6 +81,15 @@ header h1 a:visited{
     font-size: 25px;
 }
 
+header h1 a:active{
+    color:#DEB887; 
+}
+
+header h1 a:hover{
+    color:white;
+    text-decoration: underline;
+}
+
 nav ul{
     list-style-type: none;
     }

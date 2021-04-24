@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body{
+    font-family: Helvetica, Arial, sans-serif; 
+    margin: 0px;
+}
+
+body div{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header{
+    background-color: #6495ED;
+    color: #FAEBD7;
+    padding: 30px;
+    text-align: right;
+}
+
+header h1 a:link{
+    font: Lora;
+    color: #FAEBD7;
+    font-size: 25px;
+}
+
+header nav li{
+    padding: 10px;
+}
+
+main{
+    background-color: #FAEBD7;
+}
+
+body main article{
+    background-color: white;
+    font-size: 15px;
+    margin: 40px 20px;
+    padding: 25px;
+    box-shadow: 3px 3px 3px lightgrey;
+}
+
+body main article div.post-date{
+    font-weight: bold;
+    color: grey;
+    font-size: 14px; 
+}
+
+body main article section h2{
+    font-family: 'Lora', serif;
+    font-size: 19px;
+}
+
+h1{
+    font-family: 'Lora', serif;
+}
+
+a:link{
+    color:#6495ED;
+    text-decoration: none;
+}
+
+a:visited{
+    color:#6495ED;
+    text-decoration: none;
+}
+
+a:active{
+    color:#DEB887; 
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+nav ul{
+    list-style-type: none;
+    }
+
+nav ul a:link{
+    color:#FAEBD7;
+    text-decoration: none;
+}
+
+nav ul a:visited{
+    color:#FAEBD7;
+    text-decoration: none;
+}
+
+nav ul a:active{
+    color:#DEB887; 
+}
+
+nav ul a:hover{
+    color:white;
+    text-decoration: underline;
+}
+
+article section.post-content h2 a:link{
+    color:black;
+    text-decoration: none;
+}
+
+article section.post-content h2 a:visited{
+    color: black;
+    text-decoration: none;
+}
+
+article section.post-content h2 a:active{
+    color:#DEB887; 
+}
+
+article section.post-content h2 a:hover{
+    color:#6495ED;
+    text-decoration: underline;
+}
+
+img{
+    margin-top: 80px;
+    max-width: 120px;
+}
+
+
+@media screen and (min-width: 800px) {
+    body div{
+        flex-direction: row;
+    }
+
+    header{
+        width: 500px;
+    }
+
+    body main article{
+        font-size: 20px;
+        margin: 80px 80px 20px 80px;
+        padding: 60px;
+    }
+
+    body main article section h2{
+        font-size: 30px;
+    }
+
+    figure img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+    }
+
+    
+  }

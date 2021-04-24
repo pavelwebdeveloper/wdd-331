@@ -70,13 +70,11 @@ a:hover{
 }
 
 header h1 a:link{
-    font-family: 'Lora', serif;
     color:#FAEBD7;
     font-size: 25px;
 }
 
 header h1 a:visited{
-    font-family: 'Lora', serif;
     color:#FAEBD7;
     font-size: 25px;
 }

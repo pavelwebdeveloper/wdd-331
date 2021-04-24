@@ -75,6 +75,12 @@ header h1 a:link{
     font-size: 25px;
 }
 
+header h1 a:visited{
+    font: Lora;
+    color:#FAEBD7;
+    font-size: 25px;
+}
+
 nav ul{
     list-style-type: none;
     }

@@ -76,7 +76,7 @@ header h1 a:link{
 }
 
 header h1 a:visited{
-    font: 'Lora', serif;
+    font-family: 'Lora', serif;
     color:#FAEBD7;
     font-size: 25px;
 }

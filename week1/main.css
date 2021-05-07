@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 body{
     font-family: Helvetica, Arial, sans-serif; 
@@ -45,6 +45,7 @@ body main article div.post-date{
 body main article section h2{
     font-family: 'Lora', serif;
     font-size: 19px;
+    margin: 3px 0px;
 }
 
 h1{
@@ -131,8 +132,11 @@ article section.post-content h2 a:hover{
 }
 
 img{
-    margin-top: 80px;
-    max-width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    max-width: 130px;
 }
 
 
@@ -155,10 +159,7 @@ img{
         font-size: 30px;
     }
 
-    figure img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    figure img{        
         max-width: 500px;
     }
 

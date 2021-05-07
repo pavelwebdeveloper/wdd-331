@@ -1,0 +1,23 @@
+form h1 {
+    color: #009;
+   }
+
+form > p {
+    font-size: 22px;
+   }
+
+label ~ input {
+    display: block;
+    clear: both;
+   }
+
+* + fieldset {
+    margin: 5em 0;
+   }
+
+   :out-of-range {
+    background: #ffeb3b;
+   }
+   :in-range {
+    background: #fff;
+   }

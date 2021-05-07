@@ -1,0 +1,11 @@
+[id^=tab] {
+    position: absolute;
+   }
+
+   [id^=tab]:first-child {
+    z-index: 1;
+   }
+
+   [id^=tab]:target {
+    z-index: 1;
+   }

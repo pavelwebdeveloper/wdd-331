@@ -1,29 +1,45 @@
 /*  colors  */
 body {
-  background-color: #f10000;
+  background-color: #a50000;
+}
+
+h1 {
+  color: white;
 }
 
 #contactform {
-  background-color: white;
+  background-color: #e6ac00;
 }
-#contactform input, #contactform textarea {
+#contactform div {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+#contactform input:not([type=submit]), #contactform textarea {
   background-color: white;
   flex: 2;
+  margin-left: 10px;
 }
-@media (max-width: 20em) {
+@media (max-width: 25em) {
   #contactform {
     width: 100%;
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
   }
-  #contactform input:not([type=submit]), #contactform textarea {
+  #contactform div {
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #contactform div input:not([type=submit]), #contactform div textarea {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 0px;
   }
 }
-@media (min-width: 31em) {
+@media (min-width: 25em) {
   #contactform {
     width: 90%;
     max-width: 700px;
@@ -31,8 +47,7 @@ body {
     margin-right: auto;
   }
   #contactform input:not([type=submit]), #contactform textarea {
-    width: 60%;
-    margin-right: 0;
+    max-width: 60%;
   }
 }
 @media (min-width: 60em) {
@@ -43,8 +58,7 @@ body {
     margin-right: auto;
   }
   #contactform input:not([type=submit]), #contactform textarea {
-    width: 60%;
-    margin-right: 0;
+    max-width: 60%;
   }
 }
 

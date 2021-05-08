@@ -1,0 +1,198 @@
+// sass main.scss main.css
+// sass --watch main.scss:main.css
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+// colors variables
+$antique-white: #FAEBD7;
+$cornflower-blue: #6495ED;
+$burly-wood: #DEB887;
+
+// mixins
+
+@mixin linkbehaviour{
+    color: $cornflower-blue;
+    text-decoration: none;
+}
+
+@mixin headerh1linkbehaviour{
+    color: $antique-white;
+    font-size: 25px;
+}
+
+@mixin navullinkbehaviour{
+    color: $antique-white;
+    text-decoration: none;
+}
+
+@mixin articleh2linkbehaviour{
+    color:black;
+    text-decoration: none;
+}
+
+@mixin flex-container($axis){
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis;
+    -ms-flex-flow: $axis;
+    flex-flow: $axis;
+}
+
+body{
+    font-family: Helvetica, Arial, sans-serif; 
+    margin: 0px;
+
+    main{
+        background-color: $antique-white;
+
+        article{
+            background-color: white;
+            font-size: 15px;
+            margin: 40px 20px;
+            padding: 25px;
+            box-shadow: 3px 3px 3px lightgrey;
+        }
+
+        article div.post-date{
+            font-weight: bold;
+            color: grey;
+            font-size: 14px; 
+        }
+
+        article section h2{
+            font-family: 'Lora', serif;
+            font-size: 19px;
+            margin: 3px 0px;
+        }
+    }
+
+    div{
+        @include flex-container(column);    
+    }
+}
+
+
+
+header{
+    background-color: $cornflower-blue;
+    color: $antique-white;
+    padding: 30px;
+    text-align: right;
+    nav li{
+        padding: 10px;
+    }
+}
+
+h1{
+    font-family: 'Lora', serif;
+}
+
+a{
+    :link{
+        @include linkbehaviour;
+    } 
+
+    :visited{
+        @include linkbehaviour;
+    }
+
+    :active{
+        color: $burly-wood; 
+    }
+
+    :hover{
+        text-decoration: underline;
+    }
+}
+
+header h1 a:link{
+    @include headerh1linkbehaviour;
+}
+
+header h1 a:visited{
+    @include headerh1linkbehaviour;
+}
+
+header h1 a:active{
+    color: $burly-wood; 
+}
+
+header h1 a:hover{
+    color:white;
+    text-decoration: underline;
+}
+
+nav ul{
+    list-style-type: none;
+    }
+
+nav ul a:link{
+    @include navullinkbehaviour;
+}
+
+nav ul a:visited{
+    @include navullinkbehaviour;
+}
+
+nav ul a:active{
+    color: $burly-wood; 
+}
+
+nav ul a:hover{
+    color:white;
+    text-decoration: underline;
+}
+
+article section.post-content h2 a:link{
+    @include articleh2linkbehaviour;
+}
+
+article section.post-content h2 a:visited{
+    @include articleh2linkbehaviour;
+}
+
+article section.post-content h2 a:active{
+    color: $burly-wood; 
+}
+
+article section.post-content h2 a:hover{
+    color: $cornflower-blue;
+    text-decoration: underline;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    max-width: 130px;
+}
+
+
+@media screen and (min-width: 800px) {
+    body div{
+        @include flex-container(row);
+    }
+
+    header{
+        width: 500px;
+    }
+
+    body main article{
+        font-size: 20px;
+        margin: 80px 80px 20px 80px;
+        padding: 60px;
+        section h2{
+            font-size: 30px;
+        }
+    }
+
+    figure img{        
+        max-width: 500px;
+    }
+
+    
+  }

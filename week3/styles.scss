@@ -2,23 +2,23 @@
 // sass --watch styles.scss:styles.css
 /*  colors  */
 $body-background-color: darkred;
-$form-background-color: white;
+$form-background-color: #e6ac00;
 $headlines-color: white;
 $input-box-color: white;
-$break-medium: 800px;
-$break-large: 1100px;
+
+//set breakpoint sizes
+$break-small: 25em;
+$break-medium: 25em;
+$break-large: 60em;
+
+// mixins
 
 @mixin center($width, $max-width: 960px) {
     width: $width;
     max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  //set breakpoint sizes
-$break-small: 20em;
-$break-medium: 31em;
-$break-large: 60em;
+  }  
 
 @mixin breakpoint($break) {
 @if $break == large {
@@ -32,35 +32,58 @@ $break-large: 60em;
     }
 }
 
+@mixin flex-container($axis, $justify-content){
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis;
+    -ms-flex-flow: $axis;
+    flex-flow: $axis;
+    justify-content: $justify-content;
+}
+
 
 body {
-    background-color: lighten($body-background-color, 20%);
+    background-color: lighten($body-background-color, 5%);
+}
+
+h1{
+    color: $headlines-color;
 }
 
 #contactform {
     background-color: $form-background-color;
-    input, textarea {
+    div{
+        margin: 15px;
+        @include flex-container(row, flex-end);
+        overflow: hidden;
+    }
+    input:not([type=submit]), textarea {
         background-color: $input-box-color;
         flex: 2;
+        margin-left: 10px;
     }
     @include breakpoint(small) { 
         & {
         @include center(100%, 320px);
-        input:not([type=submit]), textarea {
-                    width: 100%;
-                    margin-right: auto;
-                    margin-left: auto;
+        div{
+            margin: 0;
+            @include flex-container(column, flex-start);
+            input:not([type=submit]), textarea {
+                width: 100%;
+                margin-left: 0px;
                 }
-            }  
+            }        
+        }  
     }
 
     @include breakpoint(medium) { 
         & {
         @include center(90%, 700px);
         input:not([type=submit]), textarea {
-            width: 60%;
-            margin-right: 0;
-        }
+            max-width: 60%;
+                }
             }  
     }
 
@@ -68,9 +91,8 @@ body {
         & {
             @include center(70%);
             input:not([type=submit]), textarea {
-                width: 60%;
-                margin-right: 0;
-            }
+                max-width: 60%;                
+                }
             }
      }
 }
